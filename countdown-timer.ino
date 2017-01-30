@@ -26,7 +26,7 @@ int mode           = -1;
 bool blink         = false;
 
 // Color for confiugration.
-CHSV config_color = CHSV(130, 255, 100);
+CHSV config_color = CHSV(120, 255, 100);
 
 // Array which defines which LED's should light up for each digit.
 int led_digits[10][7] = {
@@ -242,6 +242,6 @@ void setDigit(int digit, int offset, CHSV color)
 
 CHSV getColor()
 {
-    int hue = (float)(counter) / (float)(config_minutes * 60) * 120;
+    int hue = (float)(counter) / (float)(config_minutes * 60) * 100;
     return CHSV(hue, 255, 255);
 }
